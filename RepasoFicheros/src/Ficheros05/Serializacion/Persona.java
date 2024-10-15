@@ -32,7 +32,7 @@ public class Persona implements Serializable { //serialverison UI te pondrá el 
     }
     @Override
     public String toString() {
-        return apellido1 + " " + apellido2 + ", " + nombre + "(" + new SimpleDateFormat("dd-MM-yyyy").format(nacimiento) + ") ";
+        return apellido1 + " " + apellido2 + ", " + nombre + ". " + new SimpleDateFormat("dd-MM-yyyy").format(nacimiento) + "\n";
     }
     public StringBuilder getNombre() {
         return nombre;

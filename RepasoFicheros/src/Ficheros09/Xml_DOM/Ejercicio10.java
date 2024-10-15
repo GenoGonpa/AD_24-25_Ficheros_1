@@ -29,7 +29,7 @@ public class Ejercicio10 {
 			DocumentBuilder dB = dBf.newDocumentBuilder();
 			Document doc = dB.newDocument(); // SE ESTÁ CREANDO EN MEMORIA
 			
-			//CREAMOS LOS NODOS
+			// CREAMOS LOS NODOS
 			Element raiz = doc.createElement("raiz");
 			Element hijo_1 = doc.createElement("hijo");
 			Element hijo_2 = doc.createElement("hijo");
@@ -38,7 +38,7 @@ public class Ejercicio10 {
 			Text contenidoH1 = doc.createTextNode("Soy el contenido del primer hijo");
 			Text contenidoH2 =doc.createTextNode("Soy el contenido del segundo hijo");
 			
-			//CONSTRUIMOS EL ARBOL AÑADIENDO LOS NODOS EN MEMORIA
+			// CONSTRUIMOS EL ARBOL AÑADIENDO LOS NODOS EN MEMORIA
 			doc.appendChild(raiz);
 			raiz.appendChild(hijo_1);
 			raiz.appendChild(hijo_2);
@@ -47,8 +47,7 @@ public class Ejercicio10 {
 			hijo_1.setAttribute("name", "alfonso");
 			hijo_2.appendChild(contenidoH2);
 			
-			
-			// HACEMOS EL ARBOL PERSISTENTE. PASAMOS EL DOCUMENTO DOM DE MEMORIA A UN FICHERO FISICO			
+			// HACEMOS EL ARBOL PERSISTENTE. PASAMOS EL DOCUMENTO DOM DE MEMORIA A UN FICHERO FISICO
 			//CREAR EL TRANSFORMADOR
 			TransformerFactory tF = TransformerFactory.newInstance();
 			Transformer t = tF.newTransformer();

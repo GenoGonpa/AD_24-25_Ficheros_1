@@ -47,8 +47,8 @@ public class Ejercicio9 {
 //			URL url = new URL("https://acortar.link/dO4FNx");
 			
 			URL url = new URI("https://acortar.link/dO4FNx").toURL();
-			
 			Document docWeb = dB.parse(url.openStream());
+			
 			t.transform(new DOMSource(docWeb), new StreamResult(System.out)); // SE LE PASA LA URL A LEER COMO ORIGEN, DESTINO DE NUEVO CONSOLA
 			
 		} catch (ParserConfigurationException  | SAXException | IOException | TransformerException | URISyntaxException e) {
